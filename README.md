@@ -22,7 +22,7 @@ fetch("https://cors-anywhere.herokuapp.com/").then((response) => {
 
 ## API Reference
 
-<a name="slice" href="#slice">#</a> sources.<b>slice</b>(<i>source</i>) [<>](https://github.com/mbostock/slice-source/blob/master/index.js#L1 "Source")
+<a name="slice" href="#slice">#</a> sources.<b>slice</b>(<i>source</i>) [<>](https://github.com/mbostock/slice-source/blob/master/index.js#L4 "Source")
 <br><a href="#slice">#</a> sources.<b>slice</b>(<i>buffer</i>)
 <br><a href="#slice">#</a> sources.<b>slice</b>(<i>array</i>)
 
