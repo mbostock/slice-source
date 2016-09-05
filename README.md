@@ -28,7 +28,7 @@ fetch("https://cors-anywhere.herokuapp.com/").then((response) => {
 
 Returns a sliceable *source* for the specified *source* (also known as a *reader*). The *source* may also be specified as an [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or a [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) for reading from something that is already in-memory.
 
-<a name="source_read" href="#source_read">#</a> <i>source</i>.<b>read</b>(<i>length</i>) [<>](https://github.com/mbostock/slice-source/blob/master/index.js#L22 "Source")
+<a name="source_read" href="#source_read">#</a> <i>source</i>.<b>read</b>(<i>length</i>) [<>](https://github.com/mbostock/slice-source/blob/master/read.js "Source")
 
 Returns a Promise for the next chunk of data from the underlying stream. The yielded result is an object with the following properties:
 
@@ -37,6 +37,6 @@ Returns a Promise for the next chunk of data from the underlying stream. The yie
 
 The promise will be yielded with a *value* of *length* bytes, or the remaining bytes of the underlying stream if the underlying stream has more than zero but fewer than *length* bytes remaining. When no bytes remain in the stream, the yielded *value* will be undefined, and *done* will be true.
 
-<a name="source_cancel" href="#source_cancel">#</a> <i>source</i>.<b>cancel</b>() [<>](https://github.com/mbostock/slice-source/blob/master/index.js#L46 "Source")
+<a name="source_cancel" href="#source_cancel">#</a> <i>source</i>.<b>cancel</b>() [<>](https://github.com/mbostock/slice-source/blob/master/cancel.js "Source")
 
 Returns a Promise which is resolved when the underlying stream has been destroyed.
