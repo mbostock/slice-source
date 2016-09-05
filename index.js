@@ -1,5 +1,5 @@
-import ArraySource from "./array";
-import SliceSource from "./slice";
+import ArraySource from "./array/index";
+import SliceSource from "./slice/index";
 
 export function slice(source) {
   return new SliceSource(source instanceof ArrayBuffer ? new ArraySource(new Uint8Array(source))

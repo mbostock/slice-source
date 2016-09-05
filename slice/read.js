@@ -1,13 +1,7 @@
-import concat from "./concat";
-import empty from "./empty";
+import concat from "../concat";
+import empty from "../empty";
 
-function SliceSource(source) {
-  this._source = source;
-  this._array = empty;
-  this._index = 0;
-}
-
-SliceSource.prototype.read = function(length) {
+export default function(length) {
   if ((length |= 0) < 0) throw new Error("invalid length");
   if (this._index + length <= this._array.length) return Promise.resolve({done: false, value: this._array.subarray(this._index, this._index += length)});
   var that = this, index = this._array.length - this._index, arrays = index > 0 ? [this._array.subarray(this._index)] : [];
@@ -29,10 +23,4 @@ SliceSource.prototype.read = function(length) {
       return read();
     });
   })();
-};
-
-SliceSource.prototype.cancel = function() {
-  return this._source.cancel();
-};
-
-export default SliceSource;
+}
