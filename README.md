@@ -24,7 +24,7 @@ fetch("https://cors-anywhere.herokuapp.com/").then((response) => {
 
 <a name="slice" href="#slice">#</a> sources.<b>slice</b>(<i>source</i>) [<>](https://github.com/mbostock/slice-source/blob/master/index.js#L1 "Source")
 
-Returns a sliceable *source* for the specified *source* (a *reader*).
+Returns a sliceable *source* for the specified *source* (also known as a *reader*).
 
 <a name="source_read" href="#source_read">#</a> <i>source</i>.<b>read</b>([<i>length</i>]) [<>](https://github.com/mbostock/slice-source/blob/master/index.js#L22 "Source")
 
