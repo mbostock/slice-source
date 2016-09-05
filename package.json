@@ -1,0 +1,28 @@
+{
+  "name": "slice-source",
+  "version": "0.0.0",
+  "description": "A readable stream reader that reads a desired number of bytes.",
+  "keywords": [
+    "binary",
+    "stream",
+    "reader"
+  ],
+  "homepage": "https://github.com/mbostock/slice-source",
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Mike Bostock",
+    "url": "https://bost.ocks.org/mike"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/mbostock/slice-source.git"
+  },
+  "scripts": {
+    "pretest": "rm -rf build && mkdir build && rollup -f umd -n sources -o build/slice-source.js -- index.js",
+    "postpublish": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "rollup": "0.34"
+  }
+}
