@@ -30,7 +30,7 @@ Returns a sliceable *source* for the specified *source* (also known as a *reader
 
 Returns a Promise for the next chunk of data from the underlying stream. The yielded result is an object with the following properties:
 
-* `value` - a [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) (a [Buffer](https://nodejs.org/api/buffer.html)), or undefined if the stream ended
+* `value` - a [Uint8Array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array), or undefined if the stream ended
 * `done` - a boolean which is true if the stream ended
 
 If an optional *length* is specified, the promise will be yielded with a *value* of *length* bytes, or the remaining bytes of the underlying stream if the underlying stream has more than zero but fewer than *length* bytes remaining. When no bytes remain in the stream, the yielded *value* will be undefined, and *done* will be true.
