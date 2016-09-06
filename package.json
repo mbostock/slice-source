@@ -20,7 +20,7 @@
     "url": "http://github.com/mbostock/slice-source.git"
   },
   "scripts": {
-    "pretest": "rm -rf build && mkdir build && rollup -f umd -n sources -o build/slice-source.js -- index.js",
+    "prepublish": "rm -rf build && mkdir build && rollup -f umd -n sources -o build/slice-source.js -- index.js",
     "postpublish": "git push && git push --tags"
   },
   "devDependencies": {
