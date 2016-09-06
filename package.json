@@ -13,7 +13,8 @@
     "name": "Mike Bostock",
     "url": "https://bost.ocks.org/mike"
   },
-  "main": "index.js",
+  "main": "build/slice-source.js",
+  "module": "index.js",
   "repository": {
     "type": "git",
     "url": "http://github.com/mbostock/slice-source.git"
