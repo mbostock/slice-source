@@ -13,14 +13,15 @@
     "name": "Mike Bostock",
     "url": "https://bost.ocks.org/mike"
   },
-  "main": "dist/slice-source.js",
+  "main": "dist/slice-source.node.js",
+  "browser": "dist/slice-source.js",
   "module": "index.js",
   "repository": {
     "type": "git",
     "url": "http://github.com/mbostock/slice-source.git"
   },
   "scripts": {
-    "prepublish": "rm -rf dist && mkdir dist && rollup --banner \"$(preamble)\" -f umd -n sources -o dist/slice-source.js -- index.js && uglifyjs --preamble \"$(preamble)\" -o dist/slice-source.min.js -cm -- dist/slice-source.js",
+    "prepublish": "rm -rf dist && mkdir dist && rollup --banner \"$(preamble)\" -f umd -n sources -o dist/slice-source.js -- index.js && rollup --banner \"$(preamble)\" -f cjs -n sources -o dist/slice-source.node.js -- index.node.js && uglifyjs --preamble \"$(preamble)\" -o dist/slice-source.min.js -cm -- dist/slice-source.js",
     "postpublish": "git push && git push --tags"
   },
   "devDependencies": {
