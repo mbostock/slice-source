@@ -27,7 +27,7 @@ fetch("https://cors-anywhere.herokuapp.com/").then((response) => {
 
 Returns a sliceable *source* for the specified [readable *stream*](https://streams.spec.whatwg.org/#rs). If the specified *stream* does not expose a *reader*.getReader method, it assumed to be a [readable stream *reader*](https://streams.spec.whatwg.org/#readable-stream-reader), and a corresponding sliceable *source* is made.
 
-<a name="source_read" href="#source_read">#</a> <i>source</i>.<b>read</b>(<i>length</i>) [<>](https://github.com/mbostock/slice-source/blob/master/slice/read.js "Source")
+<a name="source_read" href="#source_read">#</a> <i>source</i>.<b>read</b>(<i>length</i>) [<>](https://github.com/mbostock/slice-source/blob/master/read.js "Source")
 
 Returns a Promise for the next chunk of data from the underlying stream. The yielded result is an object with the following properties:
 
@@ -36,6 +36,6 @@ Returns a Promise for the next chunk of data from the underlying stream. The yie
 
 The promise will be yielded with a *value* of *length* bytes, or the remaining bytes of the underlying stream if the underlying stream has more than zero but fewer than *length* bytes remaining. When no bytes remain in the stream, the yielded *value* will be undefined, and *done* will be true.
 
-<a name="source_cancel" href="#source_cancel">#</a> <i>source</i>.<b>cancel</b>() [<>](https://github.com/mbostock/slice-source/blob/master/slice/cancel.js "Source")
+<a name="source_cancel" href="#source_cancel">#</a> <i>source</i>.<b>cancel</b>() [<>](https://github.com/mbostock/slice-source/blob/master/cancel.js "Source")
 
 Returns a Promise which is resolved when the underlying stream has been destroyed.

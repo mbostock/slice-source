@@ -1,5 +1,5 @@
-import concat from "../concat";
-import empty from "../empty";
+import concat from "./concat";
+import empty from "./empty";
 
 export default function(length) {
   if ((length |= 0) < 0) throw new Error("invalid length");
