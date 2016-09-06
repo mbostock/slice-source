@@ -4,7 +4,7 @@ A [readable stream reader](https://streams.spec.whatwg.org/#readable-stream-read
 
 ```html
 <!DOCTYPE html>
-<script src="https://unpkg.com/slice-source@0.0"></script>
+<script src="https://unpkg.com/slice-source@0"></script>
 <script>
 
 fetch("https://cors-anywhere.herokuapp.com/").then((response) => {
