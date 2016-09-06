@@ -1,6 +1,6 @@
 {
   "name": "slice-source",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "A readable stream reader that reads a desired number of bytes.",
   "keywords": [
     "binary",
