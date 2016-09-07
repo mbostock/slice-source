@@ -4,7 +4,9 @@ import slice_read from "./read";
 import slice_slice from "./slice";
 
 export default function slice(source) {
-  return new SliceSource(source.getReader ? source.getReader() : source);
+  return typeof source.slice === "function" ? source :
+      new SliceSource(typeof source.read === "function" ? source
+          : source.getReader());
 }
 
 function SliceSource(source) {

@@ -26,8 +26,9 @@ fetch("https://cors-anywhere.herokuapp.com/")
 
 <a name="slice" href="#slice">#</a> <b>slice</b>(<i>stream</i>) [<>](https://github.com/mbostock/slice-source/blob/master/index.js#L4 "Source")
 <br><a href="#slice">#</a> <b>slice</b>(<i>reader</i>)
+<br><a href="#slice">#</a> <b>slice</b>(<i>source</i>)
 
-Returns a sliceable *source* for the specified [readable *stream*](https://streams.spec.whatwg.org/#rs). If the specified *stream* does not expose a *reader*.getReader method, it assumed to be a [readable stream *reader*](https://streams.spec.whatwg.org/#readable-stream-reader), and a corresponding sliceable *source* is made.
+If the specified *source* exposes a *source*.slice method, it is assumed to be a sliceable *source* and returned as-is. Otherwise, if the specified *reader* exposes a *reader*.read method, it is assumed to be a [readable stream *reader*](https://streams.spec.whatwg.org/#readable-stream-reader), and a new sliceable *source* for the specified *reader* is returned. Otherwise, the specified *reader* is assumed to be a [readable *stream*](https://streams.spec.whatwg.org/#rs), and a new sliceable *source* for the reader returned by *stream*.getReader is returned.
 
 <a name="source_slice" href="#source_slice">#</a> <i>source</i>.<b>slice</b>(<i>length</i>) [<>](https://github.com/mbostock/slice-source/blob/master/read.js "Source")
 
