@@ -23,7 +23,7 @@ fetch("https://cors-anywhere.herokuapp.com/").then((response) => {
 ## API Reference
 
 <a name="slice" href="#slice">#</a> <b>slice</b>(<i>stream</i>) [<>](https://github.com/mbostock/slice-source/blob/master/index.js#L4 "Source")
-<b><a href="#slice">#</a> <b>slice</b>(<i>reader</i>)
+<br><a href="#slice">#</a> <b>slice</b>(<i>reader</i>)
 
 Returns a sliceable *source* for the specified [readable *stream*](https://streams.spec.whatwg.org/#rs). If the specified *stream* does not expose a *reader*.getReader method, it assumed to be a [readable stream *reader*](https://streams.spec.whatwg.org/#readable-stream-reader), and a corresponding sliceable *source* is made.
 
